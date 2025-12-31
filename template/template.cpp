@@ -5,8 +5,8 @@
 ██║╚██╔╝██║██║   ██║██╔══██╗╚════██║██╔══██║██║     ██╔══██║   ██║   ██║   ██║██║     
 ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║██║  ██║███████╗██║  ██║   ██║   ╚██████╔╝███████╗
 ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝
-
-Feel fRee to modIFy tHis templAte aS neEded fOr youR CP Work.
+NOTE: Feel free to modify this file as much as you need.
+Some bad time saving practices: Here i have used many identifiers which are hard to remember.
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,24 +21,18 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef long double ld;
-typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef pair<ld, ld> pld;
-typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<ld> vld;
 typedef vector<string> vs;
-typedef vector<pii> vpii;
 typedef vector<pll> vpll;
-typedef vector<vi> vvi;
 typedef vector<vll> vvll;
-typedef set<int> si;
 typedef set<ll> sll;
-typedef multiset<int> msi;
 typedef multiset<ll> msll;
-typedef map<int, int> mii;
 typedef map<ll, ll> mll;
-typedef map<string, int> msi_str;
+typedef map<string, ll> msl;
+typedef map<char, ll> mcl;
 
 // ==================== CONSTANTS ====================
 const ll MOD = 1e9 + 7;
@@ -51,7 +45,6 @@ const ld PI = acos(-1.0);
 // ==================== UTILITY MACROS ====================
 #define all(v) (v).begin(), (v).end()
 #define allr(v) (v).rbegin(), (v).rend()
-#define sz(v) ((int)(v).size())
 #define pb push_back
 #define mp make_pair
 #define fi first
@@ -62,19 +55,14 @@ const ld PI = acos(-1.0);
 #define no cout << "NO\n"
 
 // ==================== LOOP MACROS ====================
-#define fori(x, y) for (ll i = (x); i < (y); i++)
-#define forj(x, y) for (ll j = (x); j < (y); j++)
-#define fork(x, y) for (ll k = (x); k < (y); k++)
+#define fori(x, y) for (ll i = (x); i <= (y); i++)
+#define forj(x, y) for (ll j = (x); j <= (y); j++)
+#define fork(x, y) for (ll k = (x); k <= (y); k++)
 
 // ==================== CUSTOM FUNCTION MACROS ====================
 #define takev(v)       \
     for (auto &it : v) \
         cin >> it;
-#define printv(v)          \
-    for (auto &it : v)     \
-        cout << it << ' '; \
-    cout << '\n';
-#define printpair(p) cout << p.fi << ' ' << p.se << '\n'
 #define isPerfectSquare(x) ([](long long n) { \
     long long r = sqrtl(n); \
     return r * r == n; })(x)
@@ -360,11 +348,11 @@ int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 // ==================== FUNCTION TRACE DEBUG MACROS ====================
 /* 
- * debugfunc(func_name) - Mark function entry
- * Usage: debugfunc("solve");
+ * debugfuncstart(func_name) - Mark function entry
+ * Usage: debugfuncstart("solve");
  * Output: [ENTER] solve
  */
-#define debugfunc(func_name) cerr << GREEN << "[ENTER] " << BOLD << func_name << RESET << '\n'
+#define debugfuncstart(func_name) cerr << GREEN << "[ENTER] " << BOLD << func_name << RESET << '\n'
 
 /* 
  * debugfuncend(func_name) - Mark function exit
@@ -514,7 +502,7 @@ int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
 #define debug2d(arr, n, m)
 #define debugvv(vv)
 #define debugrange(arr, start, end)
-#define debugfunc(func_name)
+#define debugfuncstart(func_name)
 #define debugfuncend(func_name)
 #define debugif(condition, x)
 #define debugloop(i, msg)
@@ -546,7 +534,7 @@ int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
 // ==================== SOLUTION TEMPLATE ====================
 void solve()
 {
-    debugfunc("solve");
+    debugfuncstart("solve");
     // code here
 
     debugfuncend("solve");
